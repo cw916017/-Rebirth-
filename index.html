@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>那一天之後 | 重生紀錄</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --text: #e0e0e0;
+            --accent: #E5989B;
+            --dim: rgba(255,255,255,0.6);
+        }
+
+        body, html {
+            margin: 0; padding: 0; background: var(--bg);
+            color: var(--text); font-family: 'Noto Serif TC', serif;
+            scroll-behavior: smooth;
+        }
+
+        /* 封面區 */
+        .hero {
+            height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            background: linear-gradient(to bottom, rgba(11,14,20,0) 0%, #0b0e14 100%),
+                        linear-gradient(135deg, #1B263B 0%, #0b0e14 100%);
+            text-align: center; padding: 20px;
+        }
+
+        h1 { 
+            font-size: 28px; letter-spacing: 4px; line-height: 1.6;
+            font-weight: 600; margin-bottom: 20px; color: #fff;
+        }
+        .hero-sub { font-family: 'Poppins'; font-weight: 100; letter-spacing: 5px; font-size: 12px; color: var(--accent); }
+
+        /* 故事內容區 */
+        .story-container { max-width: 600px; margin: 0 auto; padding: 50px 25px; }
+
+        .chapter { margin-bottom: 120px; opacity: 0; transform: translateY(30px); transition: 1s; }
+        .chapter.show { opacity: 1; transform: translateY(0); }
+
+        .date { 
+            font-family: 'Poppins'; font-weight: 200; font-size: 14px; 
+            color: var(--accent); letter-spacing: 2px; margin-bottom: 15px;
+            display: block; border-left: 2px solid var(--accent); padding-left: 15px;
+        }
+
+        .content { font-size: 17px; line-height: 2.2; font-weight: 300; letter-spacing: 1px; }
+        
+        .highlight { color: #fff; font-weight: 600; border-bottom: 1px solid var(--accent); }
+
+        /* 三場手術特別標註 */
+        .surgery-box {
+            background: rgba(255,255,255,0.05); border-radius: 20px;
+            padding: 30px; margin: 40px 0; border: 1px solid rgba(229, 152, 155, 0.3);
+        }
+        .surgery-title { font-weight: 600; color: var(--accent); margin-bottom: 10px; display: block; }
+
+        /* 底部 */
+        footer { 
+            text-align: center; padding: 100px 20px; 
+            font-family: 'Poppins'; font-size: 10px; letter-spacing: 3px; color: var(--dim);
+        }
+
+        .scroll-down {
+            position: absolute; bottom: 30px; animation: bounce 2s infinite;
+            font-size: 20px; color: var(--dim);
+        }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-sub">THE SURVIVOR'S JOURNAL</div>
+    <h1>那一天之後，<br>我用三次手術把命撿回來</h1>
+    <div class="scroll-down">↓</div>
+</div>
+
+<div class="story-container">
+    <div class="chapter">
+        <span class="date">114.02.06 | 18:36</span>
+        <div class="content">
+            那一刻之前，我的人生沒有預警。<br>
+            一隻貓突然衝出來，撞進我的後輪。<br>
+            安全帽噴飛，世界瞬間安靜。<br>
+            我還能動，自己爬了上來...那是我最後清醒的畫面。
+        </div>
+    </div>
+
+    <div class="chapter">
+        <span class="date">第一場手術 | 開顱減壓</span>
+        <div class="content">
+            硬腦膜上出血，出血量高達 <span class="highlight">1500cc</span>。<br>
+            吳尹傑醫師取下顱骨，釋放壓力。<br>
+            <div class="surgery-box">
+                <span class="surgery-title">這一刀，是為了讓我活下來。</span>
+                14 天在加護病房，我只是「被維持著活著」。
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <span class="date">114.03.02</span>
+        <div class="content">
+            我開始有了記憶。一點一點拼湊。<br>
+            那時候的我，連移動都需要輪椅。<br>
+            慢慢地，我開始能走。<br>
+            每一步都不穩，但那代表我正在把身體的主導權拿回來。
+        </div>
+    </div>
+
+    <div class="chapter">
+        <span class="date">114.03.25 | 第二場手術</span>
+        <div class="content">
+            顱骨重建。把當初取下的顱骨放回。<br>
+            <div class="surgery-box">
+                <span class="surgery-title">這不只是手術。</span>
+                是把我「人」的形狀，重新拼回來。
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <span class="date">114.05.03</span>
+        <div class="content">
+            回到崗位，只撐了一週。<br>
+            頭暈、疲勞、注意力混亂。<br>
+            我才明白——<span class="highlight">活下來，不代表恢復了。</span>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <span class="date">114.11.13 | 第三場手術</span>
+        <div class="content">
+            林口長庚。顳骨重建與填補。<br>
+            這一次不是救命，是為了修復結構缺損。<br>
+            <div class="surgery-box">
+                <span class="surgery-title">這一刀，是讓我能像正常人活著。</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter">
+        <span class="date">REFLECTIONS</span>
+        <div class="content">
+            我沒有回到原本的自己。<br>
+            但我成為了一個，從死亡邊緣走回來的人。<br><br>
+            從破碎，到修補。<br>
+            這是我把自己一塊一塊撿回來的過程。
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 REBIRTH JOURNAL | FON__NAIL PROJECT
+</footer>
+
+<script>
+    // 滑動顯示動畫
+    const observerOptions = { threshold: 0.2 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.chapter').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
