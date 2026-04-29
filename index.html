@@ -21,32 +21,31 @@
                         linear-gradient(135deg, #1B263B 0%, #0b0e14 100%); 
             text-align: center; padding: 20px; position: relative;
         }
-        h1 { font-size: 32px; letter-spacing: 5px; line-height: 1.8; font-weight: 600; margin-bottom: 20px; color: #fff; }
+        h1 { font-size: 28px; letter-spacing: 5px; line-height: 1.8; font-weight: 600; margin-bottom: 20px; color: #fff; padding: 0 20px; }
         .hero-sub { font-family: 'Poppins'; font-weight: 100; letter-spacing: 8px; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
 
         .story-container { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
         
-        /* 章節設定 */
         .chapter { margin-bottom: 120px; opacity: 0; transform: translateY(50px); transition: 1.5s ease-out; }
         .chapter.show { opacity: 1; transform: translateY(0); }
         
         .date { font-family: 'Poppins'; font-weight: 200; font-size: 15px; color: var(--accent); letter-spacing: 3px; margin-bottom: 20px; display: block; border-left: 3px solid var(--accent); padding-left: 20px; }
         .content { font-size: 18px; line-height: 2.2; font-weight: 300; letter-spacing: 1.5px; margin-bottom: 30px; }
         
-        .surgery-box { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 35px; margin: 40px 0; border: 1px solid rgba(229, 152, 155, 0.3); }
+        .surgery-box { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 30px; margin: 40px 0; border: 1px solid rgba(229, 152, 155, 0.3); }
         .surgery-title { font-weight: 600; color: var(--accent); margin-bottom: 15px; display: block; font-size: 20px; }
 
-        /* 圖片樣式 */
-        .comic-img { width: 100%; border-radius: 15px; margin: 40px 0; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: block; background: #1a1a1a; min-height: 200px; }
+        /* 圖片樣式 - 已對應妳的 .png 檔案 */
+        .comic-img { width: 100%; border-radius: 15px; margin: 40px 0; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: block; background: #1a1a1a; }
         
         /* 懸浮小按鈕 */
         .floating-btn {
-            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+            position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px;
             background: var(--accent); color: white; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer;
-            z-index: 1000; font-size: 12px; font-weight: 600; text-align: center;
-            line-height: 1.2; text-decoration: none; border: none; transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); cursor: pointer;
+            z-index: 1000; font-size: 13px; font-weight: 600; text-align: center;
+            line-height: 1.2; border: none; transition: 0.3s;
         }
         .floating-btn:hover { transform: scale(1.1); background: #d48285; }
 
@@ -58,7 +57,7 @@
 </head>
 <body>
 
-<button class="floating-btn" onclick="document.getElementById('start').scrollIntoView()">重生<br>故事</button>
+<button class="floating-btn" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})">重生<br>故事</button>
 
 <div class="hero">
     <div class="hero-sub">THE REBIRTH JOURNAL</div>
@@ -66,39 +65,38 @@
     <div class="scroll-down">↓</div>
 </div>
 
-<div class="story-container" id="start">
+<div class="story-container">
     
     <div class="chapter">
         <span class="date">114.02.06 | 18:36</span>
         <div class="content">
-            那一刻之前，我的人生沒有預警。一切被打碎。<br>
-            一隻貓突然衝出來，撞進我的後輪。我被甩飛出去。
+            那一刻之前，我的人生沒有預警。那一刻之後，一切被打碎。<br><br>
+            一隻貓突然衝出來，撞進我的後輪。車身瞬間失控，我被甩飛出去。
         </div>
-        <img src="1.jpg" onerror="this.src='1.JPG'" class="comic-img">
+        <img src="1.png" class="comic-img">
         <div class="content">
-            安全帽噴飛，我摔進水溝，右側頭部先撞。<br>
-            世界瞬間安靜...那是我最後清醒的畫面。
+            安全帽重重扣地，在劇烈摩擦之下，扣具鬆脫。我摔進水溝，右側頭部先撞。世界瞬間安靜，又混亂。
         </div>
-        <img src="1-1.jpg" onerror="this.src='1-1.JPG'" class="comic-img">
+        <img src="1-1.png" class="comic-img">
     </div>
 
     <div class="chapter">
         <span class="date">第一場手術 | 開顱減壓</span>
         <div class="content">
-            硬腦膜上出血量高達 1500cc。醫師取下顱骨，讓腦部釋放壓力。
+            硬腦膜上出血，出血量高達 1500cc。當晚 22 點，我被緊急推進手術室。
         </div>
         <div class="surgery-box">
             <span class="surgery-title">那一刀，是為了讓我活下來。</span>
-            14天的加護病房。沒有記憶，沒有時間。我只是「被維持著活著」。
+            由吳尹傑醫師進行開顱減壓手術——取下顱骨，讓腦部釋放壓力。接下來是 14 天的加護病房，我只是「被維持著活著」。
         </div>
     </div>
 
     <div class="chapter">
         <span class="date">114.03.02 | 記憶重組</span>
         <div class="content">
-            我開始有記憶，一點一點拼湊。那時候的我，連移動都需要輪椅。
+            我開始有記憶，一點一點拼湊。那時候的我，連移動都需要輪椅。身體還在，但控制還不穩。
         </div>
-        <img src="3.jpg" onerror="this.src='3.JPG'" class="comic-img">
+        <img src="3.png" class="comic-img">
         <div class="content">
             慢慢地，我開始能走。每一步都不穩，但那代表我正在把身體的主導權拿回來。
         </div>
@@ -106,22 +104,29 @@
 
     <div class="chapter">
         <span class="date">114.03.25 | 第二場手術</span>
+        <div class="content">
+            進行顱骨重建，把當初為了減壓而取下的顱骨放回。
+        </div>
         <div class="surgery-box">
             <span class="surgery-title">這不只是手術。</span>
             是把我「人」的形狀，重新拼回來。
         </div>
-        <img src="第二頁.jpg" class="comic-img">
+        <img src="第二頁.png" class="comic-img">
         <div class="content">
-            出院後回到崗位，我才明白——活下來，不代表恢復了。真正的難才開始。
+            3 月 28 日出院。很多人以為這是結束，但真正的難，從這裡才開始。
         </div>
     </div>
 
     <div class="chapter">
         <span class="date">114.11.13 | 第三場手術</span>
         <div class="content">
-            林口長庚，顳骨重建與填補。這一刀，不是救命，是讓我能夠比較像正常人活著。
+            5 月 3 日回到崗位，我才明白活下來不代表恢復了。顳骨區域的結構性缺損，讓我必須再次躺上手術檯。
         </div>
-        <img src="end.jpg" onerror="this.src='end.JPG'" class="comic-img">
+        <div class="surgery-box">
+            <span class="surgery-title">這一刀，是讓我能像正常人活著。</span>
+            林口長庚，顳骨重建與填補手術。這一年，我經歷了三場手術：第一場救命，第二場拼回形狀，第三場修復生活。
+        </div>
+        <img src="end.jpg" class="comic-img">
         <div class="content" style="text-align: center; margin-top: 50px;">
             我沒有回到原本的自己。<br>
             但我成為了一個，從死亡邊緣走回來的人。
@@ -135,7 +140,6 @@
 </footer>
 
 <script>
-    // 捲動顯示效果
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('show');
