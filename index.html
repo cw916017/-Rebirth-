@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>重生之書 | 我的真實紀錄</title>
+    <title>重生紀錄 | 恭喜你，撿回一條命</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,90 +13,126 @@
             --dim: rgba(255,255,255,0.6);
         }
         body, html { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Noto Serif TC', serif; scroll-behavior: smooth; }
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(to bottom, rgba(11,14,20,0) 0%, #0b0e14 100%), linear-gradient(135deg, #1B263B 0%, #0b0e14 100%); text-align: center; padding: 20px; }
-        h1 { font-size: 28px; letter-spacing: 4px; line-height: 1.6; font-weight: 600; margin-bottom: 20px; color: #fff; }
-        .hero-sub { font-family: 'Poppins'; font-weight: 100; letter-spacing: 5px; font-size: 12px; color: var(--accent); }
-        .story-container { max-width: 600px; margin: 0 auto; padding: 50px 25px; }
-        .chapter { margin-bottom: 120px; opacity: 0; transform: translateY(30px); transition: 1.2s; }
+        
+        /* 封面 */
+        .hero { 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            background: linear-gradient(to bottom, rgba(11,14,20,0) 0%, #0b0e14 100%), 
+                        linear-gradient(135deg, #1B263B 0%, #0b0e14 100%); 
+            text-align: center; padding: 20px; 
+        }
+        h1 { font-size: 32px; letter-spacing: 5px; line-height: 1.8; font-weight: 600; margin-bottom: 20px; color: #fff; }
+        .hero-sub { font-family: 'Poppins'; font-weight: 100; letter-spacing: 8px; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
+
+        .story-container { max-width: 700px; margin: 0 auto; padding: 50px 25px; }
+        
+        /* 章節設定 */
+        .chapter { margin-bottom: 150px; opacity: 0; transform: translateY(50px); transition: 1.5s ease-out; }
         .chapter.show { opacity: 1; transform: translateY(0); }
-        .date { font-family: 'Poppins'; font-weight: 200; font-size: 14px; color: var(--accent); letter-spacing: 2px; margin-bottom: 15px; display: block; border-left: 2px solid var(--accent); padding-left: 15px; }
-        .content { font-size: 17px; line-height: 2.2; font-weight: 300; letter-spacing: 1px; }
-        .highlight { color: #fff; font-weight: 600; border-bottom: 1px solid var(--accent); }
-        .surgery-box { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 30px; margin: 40px 0; border: 1px solid rgba(229, 152, 155, 0.3); }
-        .surgery-title { font-weight: 600; color: var(--accent); margin-bottom: 10px; display: block; }
-        footer { text-align: center; padding: 100px 20px; font-family: 'Poppins'; font-size: 10px; letter-spacing: 3px; color: var(--dim); }
-        .scroll-down { position: absolute; bottom: 30px; animation: bounce 2s infinite; font-size: 20px; color: var(--dim); }
+        
+        .date { font-family: 'Poppins'; font-weight: 200; font-size: 15px; color: var(--accent); letter-spacing: 3px; margin-bottom: 20px; display: block; border-left: 3px solid var(--accent); padding-left: 20px; }
+        .content { font-size: 18px; line-height: 2.2; font-weight: 300; letter-spacing: 1.5px; margin-bottom: 30px; }
+        
+        .surgery-box { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 35px; margin: 40px 0; border: 1px solid rgba(229, 152, 155, 0.3); }
+        .surgery-title { font-weight: 600; color: var(--accent); margin-bottom: 15px; display: block; font-size: 20px; }
+
+        /* 圖片樣式 */
+        .comic-img { width: 100%; border-radius: 15px; margin: 40px 0; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: block; }
+        
+        footer { text-align: center; padding: 100px 20px; font-family: 'Poppins'; font-size: 11px; letter-spacing: 4px; color: var(--dim); }
+        
+        /* 滾動提示 */
+        .scroll-down { position: absolute; bottom: 40px; animation: bounce 2s infinite; font-size: 24px; color: var(--dim); cursor: default; }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
-        img { width: 100%; border-radius: 15px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
     </style>
 </head>
 <body>
 
 <div class="hero">
     <div class="hero-sub">THE REBIRTH JOURNAL</div>
-    <h1>那一天之後，<br>我用三次手術把命撿回來</h1>
+    <h1>「恭喜你，撿回一條命。」</h1>
     <div class="scroll-down">↓</div>
 </div>
 
 <div class="story-container">
+    
     <div class="chapter">
         <span class="date">114.02.06 | 18:36</span>
         <div class="content">
             那一刻之前，我的人生沒有預警。<br>
-            一隻貓突然衝出來，撞進我的後輪。<br>
-            安全帽噴飛，我摔進水溝。<br>
-            <img src="1.jpg" alt="事故現場">
-            世界瞬間安靜...那是我最後清醒的畫面。
+            那一刻之後，一切被打碎。<br>
+            一隻貓突然衝出來，撞進我的後輪。車身瞬間失控，我被甩飛出去。
         </div>
+        <img src="1.jpg" class="comic-img" alt="車禍瞬間">
+        <div class="content">
+            安全帽噴飛，我摔進水溝，右側頭部先撞。<br>
+            世界瞬間安靜，又混亂。<br>
+            我還能動。我自己爬上來。那是我最後清醒的畫面。
+        </div>
+        <img src="1-1.jpg" class="comic-img" alt="事故現場細節">
     </div>
 
     <div class="chapter">
-        <span class="date">第一場手術 | 救命的一刀</span>
+        <span class="date">第一場手術 | 開顱減壓</span>
         <div class="content">
-            硬腦膜上出血量高達 <span class="highlight">1500cc</span>。<br>
-            吳尹傑醫師取下顱骨，釋放壓力。<br>
-            <div class="surgery-box">
-                <span class="surgery-title">這是一場與死神的賽跑。</span>
-                在加護病房的 14 天，我只是「被維持著活著」。
-            </div>
-            <img src="1-1.jpg" alt="醫療紀錄">
+            我發生的是硬腦膜上出血，出血量高達 <span style="color:#fff; font-weight:600;">1500cc</span>。<br>
+            吳尹傑醫師進行開顱減壓手術——取下顱骨，釋放壓力。
+        </div>
+        <div class="surgery-box">
+            <span class="surgery-title">那一刀，是為了讓我活下來。</span>
+            14天的加護病房與重症病房。沒有記憶，沒有時間。我只是「被維持著活著」。
         </div>
     </div>
 
     <div class="chapter">
         <span class="date">114.03.02 | 記憶重組</span>
         <div class="content">
-            我開始有了記憶，一點一點拼湊。<br>
-            連移動都需要輪椅。每一步都不穩，<br>
-            但那代表我正在把身體的主導權拿回來。
-            <img src="3.jpg" alt="復健過程">
+            我開始有記憶。不是全部回來，而是一點一點拼湊。<br>
+            那時候的我，連移動都需要輪椅。
+        </div>
+        <img src="3.jpg" class="comic-img" alt="醫院復健">
+        <div class="content">
+            慢慢地，我開始能走。<br>
+            每一步都不穩，但那代表我正在把身體的主導權拿回來。
         </div>
     </div>
 
     <div class="chapter">
-        <span class="date">後續手術 | 拼回自己</span>
+        <span class="date">114.03.25 | 第二場手術</span>
         <div class="content">
-            3月25日，顱骨重建；11月13日，顳骨填補。<br>
-            一刀是拼回形狀，一刀是為了恢復正常。<br>
-            <div class="surgery-box">
-                <span class="surgery-title">這是我把自己一塊一塊撿回來的過程。</span>
-            </div>
-            <img src="第二頁.jpg" alt="重建紀錄">
+            顱骨重建，把當初為了減壓而取下的顱骨放回。
+        </div>
+        <div class="surgery-box">
+            <span class="surgery-title">這不只是手術。</span>
+            是把我「人」的形狀，重新拼回來。
+        </div>
+        <img src="第二頁.jpg" class="comic-img" alt="回歸崩潰與重生">
+        <div class="content">
+            出院後回到崗位，我才明白——<br>
+            活下來，不代表恢復了。頭暈、混亂，真正的難才開始。
         </div>
     </div>
 
     <div class="chapter">
-        <span class="date">LIFE GOES ON</span>
+        <span class="date">114.11.13 | 第三場手術</span>
         <div class="content">
+            林口長庚，顳骨重建與填補手術。<br>
+            修復結構性缺損，讓頭部結構恢復穩定。
+        </div>
+        <div class="surgery-box">
+            <span class="surgery-title">這一刀，是讓我能比較像正常人活著。</span>
+        </div>
+        <img src="end.jpg" class="comic-img" alt="最終章重生">
+        <div class="content" style="text-align: center; margin-top: 50px;">
             我沒有回到原本的自己。<br>
-            但我成為了一個，從死亡邊緣走回來的人。<br>
-            <img src="end.jpg" alt="重生">
+            但我成為了一個，從死亡邊緣走回來的人。
         </div>
     </div>
+
 </div>
 
 <footer>
-    © 2026 THE REBIRTH STORY | PERSISTENCE & COURAGE
+    © 2026 THE REBIRTH JOURNAL | PERSISTENCE & COURAGE
 </footer>
 
 <script>
